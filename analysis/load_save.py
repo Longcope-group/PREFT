@@ -5,8 +5,6 @@ from scipy.io import readsav
 class Tarr:
     def __init__(self, file):
         save_d = readsav(file,verbose=False,python_dict=False)
-        #recarray = save_d["tarr"]
-        #self.recarray = recarray
         self._recarray = save_d["tarr"]
         self.variables = self._recarray.dtype.names
 
